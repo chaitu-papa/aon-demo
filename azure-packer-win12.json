@@ -18,14 +18,16 @@
     "capture_container_name": "images",
     "capture_name_prefix": "packer",
     "os_type": "Windows",
-    "image_url": "/subscriptions/d78af5f4-5d2d-4141-a725-2088437da0ca/resourceGroups/Green-P-RG/providers/Microsoft.Compute/images/Testimage1",   
+    "image_publisher": "MicrosoftWindowsServer",    
+    "image_offer": "WindowsServer",  
+    "image_sku": "2012-R2-Datacenter",    
     "communicator": "winrm",
     "winrm_use_ssl": "true",
     "winrm_insecure": "true",
     "winrm_timeout": "5m",
     "winrm_username": "packer",
     "location": "Southeast Asia",
-    "vm_size": "Standard_DS2_v2"
+    "vm_size": "Standard_DS1_V2"
   }],
   "provisioners": [{
     "type": "powershell",

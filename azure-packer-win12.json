@@ -1,0 +1,37 @@
+{
+  "variables": {
+    "ARM_CLIENT_ID": "",
+    "ARM_CLIENT_SECRET": "",
+    "ARM_RESOURCE_GROUP": "",
+    "ARM_STORAGE_ACCOUNT": "",
+    "ARM_SUBSCRIPTION_ID": "",
+    "ARM_OBJECT_ID": ""
+  },
+  "builders": [{
+    "type": "azure-arm",
+    "client_id": "{{user `ARM_CLIENT_ID`}}",
+    "client_secret": "{{user `ARM_CLIENT_SECRET`}}",
+    "resource_group_name": "{{user `ARM_RESOURCE_GROUP`}}",
+    "storage_account": "{{user `ARM_STORAGE_ACCOUNT`}}",
+    "subscription_id": "{{user `ARM_SUBSCRIPTION_ID`}}",
+    "object_id": "{{user `ARM_OBJECT_ID`}}",
+    "capture_container_name": "images",
+    "capture_name_prefix": "packer",
+    "os_type": "Windows",
+    "image_publisher": "MicrosoftWindowsServer",
+    "image_offer": "WindowsServer",
+    "image_sku": "Testimage1",
+    "communicator": "winrm",
+    "winrm_use_ssl": "true",
+    "winrm_insecure": "true",
+    "winrm_timeout": "3m",
+    "winrm_username": "packer",
+    "location": "Southeast Asia",
+    "vm_size": "Standard_DS2_v2"
+  }],
+  "provisioners": [{
+    "type": "powershell",
+       "script": "{{user `ws2012-setup.ps1`}}"
+  }]
+}
+

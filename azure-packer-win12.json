@@ -26,8 +26,8 @@
     "winrm_insecure": "true",
     "winrm_timeout": "5m",
     "winrm_username": "packer",
-    "location": "Southeast Asia",
-    "vm_size": "Standard_DS1_V2"
+    "location": "southeastasia",
+    "vm_size": "SStandard_D1_v2"
   }],
   "provisioners": [{
     "type": "powershell",

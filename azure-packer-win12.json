@@ -29,7 +29,7 @@
     "winrm_timeout": "5m",
     "winrm_username": "packer",
     "location": "southeastasia",
-    "vm_size": "SStandard_D1_v2"
+    "vm_size": "Standard_D1_v2"
   }],
   "provisioners": [{
     "type": "powershell",
